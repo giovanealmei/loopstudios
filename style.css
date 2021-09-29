@@ -25,7 +25,7 @@ p{
 
 /* width */
 .container{
-    width: 1114px;
+    max-width: 1114px;
     margin: 0 auto;
 }
 
@@ -297,22 +297,16 @@ p{
 
 /* responsiveness */
 @media (max-width: 1024px){
-    .container{
-        width: 1000px;
-        margin: 0 auto;
-    }
     .border{
         max-width: 60%;
         margin: 60px 0;
         padding: 30px;;
     }
+    .container{
+        margin: 0 5%;
+    }
 }
 @media (max-width: 768px){
-    .container{
-        width: 728px;
-        margin: 0 auto;
-        padding: 20px;
-    }
     .border{
         max-width: 60%;
         margin: 60px 0;
@@ -324,14 +318,17 @@ p{
         font-size: .9em;
     }
     .content-item img{
-        width: 65%;
+        max-width: 65%;
+    }
+    .container{
+        margin: 0 5%;
     }
 }
 
-@media (max-width: 576px), (max-width: 320px){
+
+@media (max-width: 576px){
     .container{
-        width: 568px;
-        margin: 0 auto;
+        margin: 0 5%;
     }
     .header-nav{
         display: none;
@@ -341,7 +338,7 @@ p{
         margin: 300px auto;
     }
     .title{
-        font-size: 3.5em;
+        font-size: 1.75em;
     }
     *{
         justify-content: center;
@@ -372,10 +369,10 @@ p{
     /* images */
     .list1 div, .list2 div{
         height: 240px;
-        width: 100%;
+        width: 90%;
         position: static;
         transition: 200ms;
-        margin: 10px;
+        margin: 10px auto;
     }
     .list1 div:hover::before, .list2 div:hover::before{
         /* content: '';
@@ -484,5 +481,9 @@ p{
     }
     .container{
         padding-bottom: 5px;
+    }
+    .credits{
+        height: 60px;
+        align-items: center;
     }
 } 
