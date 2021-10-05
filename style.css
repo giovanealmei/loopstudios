@@ -129,6 +129,9 @@ p{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
 }
+.mobile{
+    display: none;
+}
 .content-images a{
     text-decoration: none;
     color: var(--gray);
@@ -303,7 +306,7 @@ p{
         padding: 30px;;
     }
     .container{
-        margin: 0 5%;
+        max-width: 972.8px;
     }
 }
 @media (max-width: 768px){
@@ -321,21 +324,27 @@ p{
         max-width: 65%;
     }
     .container{
-        margin: 0 5%;
+        max-width: 729.6px;
     }
 }
 
 
 @media (max-width: 576px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: unset;
+    }
     .container{
-        margin: 0 5%;
+        max-width: 95%;
     }
     .header-nav{
         display: none;
     } 
     .border{
         max-width: 85%;
-        margin: 300px auto;
+        margin: 200px auto;
     }
     .title{
         font-size: 1.75em;
@@ -356,7 +365,7 @@ p{
             text-align: center;
     }
     .content-item img{
-        width: 100%;
+        max-width: 100%;
     }
     .content-item p, .title-content{
         text-align: center;
@@ -364,9 +373,26 @@ p{
     .item-text{
     position: static;
     width: 100%;
+    padding: 40px 0 0 0;
     }
 
     /* images */
+    h2.title-content-images{
+        text-align: center;
+    }
+    a.btn.desktop{
+        display: none;
+    }
+    .btn{
+        display: flex;
+        margin-bottom: 100px;
+        padding: 23px 20px 20px 20px;
+        text-decoration: none;
+        color: var(--gray);
+    }
+    .list2{
+        margin-bottom: 40px;
+    }
     .list1 div, .list2 div{
         height: 240px;
         width: 90%;
@@ -428,7 +454,9 @@ p{
     .item8{
         background: url(images/mobile/image-fisheye.jpg) no-repeat;
     }
-    .btn{display: none;}
+    .icons-desktop{
+        display: none;
+    }
     .content-images{
         justify-content: center;
         margin-bottom: 30px;
@@ -456,8 +484,8 @@ p{
        padding: 0px 0px 25px 0px;
    }
    .nav-bottom, .nav-media {
-    justify-content: center;
-    padding-top: 10px;
+        justify-content: center;
+        padding-top: 20px;
     }
     .nav-bottom a, .nav-media a {
         color: white;
@@ -478,6 +506,7 @@ p{
     .credits-mobile{
         display: flex;
         margin-top: 20px;
+        text-align: center;
     }
     .container{
         padding-bottom: 5px;
@@ -485,5 +514,8 @@ p{
     .credits{
         height: 60px;
         align-items: center;
+    }
+    .credits p{
+        text-align: center;
     }
 } 
